@@ -2,3 +2,5 @@
 
 # SAP2SDS
 
+Migration of archaeological stone artefact datasets from SAP to SDS recording scheme
+
