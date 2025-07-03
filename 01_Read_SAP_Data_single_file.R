@@ -18,6 +18,11 @@ datei <- here::here("data-raw/SAP/LW8.txt")
 #datei <- c("L:/00_Peters/Projekte, Publikationen/Projekte/2025_SDS/data-raw/SAP/LW8.txt")
 
 
+# Have a look at the file
+#file.show(datei)
+
+
+
 # bei namen ".txt" abtrennen:
 namen   <-   unlist(strsplit(as.character(basename(datei)), split = ".txt", fixed=TRUE))
 

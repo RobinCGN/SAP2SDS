@@ -28,6 +28,8 @@ require(here)
 #data <- read.csv(here("data-raw/SAP_CSV/RA_85_dig_Anhang_124_Formblatt_01_Kern.csv"), sep=";",dec = ",", encoding="latin1")
 data <- LW8
 
+
+
 head(data)
 str(data)
 
@@ -366,6 +368,6 @@ data$IGerM
 
 str(data)
 
-
+cat("Writing SAS data to file\n")
 write.csv(data, here::here("output",data.export.name),row.names = F)
 

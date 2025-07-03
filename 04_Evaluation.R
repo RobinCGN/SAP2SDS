@@ -56,8 +56,8 @@ t7 <- data.deco %>%
   summarise(Anzahl = n(), Proz = n() / nrow(data.deco) * 100)
 t7
 
-
-sink(here("Data_Report.txt"))
+export.file <- here::here("output/Data_Report.txt")
+sink(export.file)
 cat("Data Report\n\n")
 tibble.liste <- list(t1, t2, t3, t4, t5, t6, t7)
 for (i in 1:length(tibble.liste)) {   
@@ -68,3 +68,5 @@ for (i in 1:length(tibble.liste)) {
 }
 as.data.frame(t1)
 sink()
+
+file.show(export.file)
