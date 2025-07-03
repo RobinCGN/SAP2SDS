@@ -11,7 +11,7 @@
 
 
 # Datei sysdata.rda laden und R-Skript "sdsdecode" ausführen:
-load(here::here("SDSanalysis_R-Package/R/sysdata.rda"))
+load(here::here("source/sysdata.rda"))
 source(here::here("sdsdecode_edit.R"))
 
 
