@@ -1,0 +1,10 @@
+ID;Therm_Art;Wert
+1;Keine thermische Einwirkung vorhanden;0
+2;Farbänderungen;1
+3;Risse;2
+4;Schalige Aussprünge;3
+5;Farbänderung und Risse;4
+6;Farbänderung und schalige Aussprünge;5
+7;Risse und schalige Aussprünge;6
+8;Farbänderung, Risse uns schalige Aussprünge;7
+9;Keine Aussage, ob thermische Einwirkung vorhanden;8

@@ -1,0 +1,11 @@
+ID;Sandst_Seiten;Wert
+1;Keine Seiter erhalten;0
+2;Keine Zurichtung;1
+3;Geschlagen;2
+4;Gepickt;3
+5;Geschliffen;4
+6;Geschlagen und gepickt;5
+7;Geschlagen und geschliffen;6
+8;Gepickt und geschliffen;7
+9;Geschlagen, gepickt und geschliffen;8
+10;Keine Aussage;9

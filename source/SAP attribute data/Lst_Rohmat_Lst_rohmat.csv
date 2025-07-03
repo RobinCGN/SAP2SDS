@@ -1,0 +1,63 @@
+ID;Rohmat;Wert;Kategorie
+1;"Hellgrauer ""belgischer"" Feuerstein";01;Silex
+2;"""Pseudo Belgischer"" mit abgerollter Rinde";0601;Silex
+3;"""Pseudo Belgischer"" ohne Rinde";0106;Silex
+4;Vetschauer-Feuerstein;02;Silex
+5;Rullen-Feuerstein;03;Silex
+6;Lousberg-Feuerstein;04;Silex
+7;Rijckholt-Feuerstein;05;Silex
+8;Schotter-Feuerstein;06;Silex
+9;Rijckholt-Schotter;0506;Silex
+10;Schotter-Rijckholt;0605;Silex
+12;Obourg-Feuerstein;07;Silex
+13;Valkenburg-Feuerstein;08;Silex
+14;Baltischer Flint;09;Silex
+15;Knollenhornstein;12;Silex
+16;Plattenhornstein;13;Silex
+17;"""Silex rubanée""";62;Silex
+18;Muschelkalkhornstein;61;Silex
+19;Gaurer Achat;63;Silex
+20;Chalzedon;16;Silex
+21;Obsidian;23;Silex
+22;Wommersom Quarzit;35;Silex
+23;Quarzit,grobkörnig;17;Anderes
+24;Quarzit, feinkörnig;18;Anderes
+25;Radiolarit;14;Silex
+26;Kieselkalk;20;Silex
+27;Bergkristall;22;Silex
+28;Kieselschiefer;15;Anderes
+29;Singulärer Feuerstein;10;Silex
+30;Unbestimmbarer Feuerstein;11;Silex
+31;Eschweiler-Kohlen-Sandstein;29;Sandstein
+33;Herzogenrather Sandstein;30;Sandstein
+34;Kinzweiler Sandstein;31;Sandstein
+35;Marmorierter Sandstein;39;Sandstein
+36;Sandstein aus tertiären Blockschüttungen;40;Sandstein
+37;Singulärer Sandstein;41;Sandstein
+38;Sonstige und unbestimmbare Sandsteine;42;Sandstein
+39;Feiner, harter Sandstein;2932;Sandstein
+40;Oolithischer Rötel;37;Rötel
+41;Harter Rötel;36;Rötel
+42;Weicher Rötel;27;Rötel
+43;Eisenkieselerze;45;Rötel
+44;Kieselige Hämatiterze;46;Rötel
+45;Sandsiltige Eisenerze;47;Rötel
+46;Eisenschüssige Sandsteine;48;Rötel
+47;Verwitterungserze;49;Rötel
+48;Sonstige Rötel;50;Rötel
+49;Sonstige Gerölle oder unbestimmbare Felsgesteine;43;Anderes
+50;Quarzit-Gerölle;44;Anderes
+51;Milchquarz;21;Anderes
+53;Wetzschiefer, Phyllitschiefer, Revinquarzit;26;Anderes
+54;Amphibolit;24;Anderes
+55;Basalt;19;Anderes
+56;Tonschiefer;33;Anderes
+57;Basaltlava;38;Anderes
+58;Andere Vulkanite und Plutonite;25;Anderes
+59;Gagat;34;Anderes
+60;Grauwacke;66;Anderes
+61;Buntsandstein;73;Sandstein
+86;Buntsandstein in Schleifsteinqualität;7339;Sandstein
+87;Buntsandstein in Mahlsteinqualität;74;Sandstein
+88;Belgischer-Rullen;0103;Silex
+89;Simpelveld;1002;Silex

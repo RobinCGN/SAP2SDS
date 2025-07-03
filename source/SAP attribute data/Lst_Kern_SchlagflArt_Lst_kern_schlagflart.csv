@@ -1,0 +1,7 @@
+ID;Kern_SchlagflArt;Wert
+1;Keine Schlagfläche vorhanden;0
+2;Schlagfläche mit nur einem Negativ;1
+3;Schlagfläche mit mehr als einem Negativ;2
+4;Schlagfläche mit Kortex oder natürlicher Sprungfläche;3
+5;Keine Aussage;4
+6;Gratförmig;6

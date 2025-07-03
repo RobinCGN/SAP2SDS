@@ -1,0 +1,10 @@
+ID;Dorsalflpräp;Wert;Kommentar
+1;Keine Dorsalflächenpräparation;0;""
+2;Präparation einseitig primär;1;""
+3;Präparation einseitig sekundär;2;""
+4;Präparation beidseitig, einmal primär, einmal sekundär;3;""
+5;Präparation beidseitig, primär;4;""
+6;Präparation einseitig primär und sekundär;5;""
+7;Präparation beidseitig primär und sekundär;6;""
+8;Keine Aussage über die Art der Präparation;7;""
+9;Keine Aussage, ob Präparation vorhanden oder nicht;8;""

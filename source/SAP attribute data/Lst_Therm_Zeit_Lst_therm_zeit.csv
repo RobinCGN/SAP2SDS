@@ -1,0 +1,8 @@
+ID;Therm_Zeit;Wert
+1;Keine thermische Einwirkung;0
+2;Rohstoff aufgeheizt;1
+3;Nach Abtrennung der Grundform bzw. dem Abbau als Kern;2
+4;Thermischer Bruch;3
+5;Nach der Modifikation;4
+6;Unbestimmbar;5
+7;Verbranntes Nicht-Artefakt;6

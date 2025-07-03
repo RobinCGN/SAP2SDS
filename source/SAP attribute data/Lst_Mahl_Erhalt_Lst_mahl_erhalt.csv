@@ -1,0 +1,8 @@
+ID;Mahl_Erhalt;Wert
+1;Kein Mahl- oder Schleifstein, sondern Pfeilschaftglätter;0
+2;Medialfragment ohne Außenkante;1
+3;Randfragment mit einer Außenkante;2
+4;Medialfragment mit zwei gegenüberliegenden Außenkanten;3
+5;Endfragment mit zwei oder drei zusammenstoßenden Außenkanten;4
+6;Vollständig;5
+7;Keine Aussage;6

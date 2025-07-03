@@ -1,0 +1,5 @@
+ID;Nat_Fl_Abroll;Wert
+1;Keine natürlichen Flächen;0
+2;Abrollung vorhanden;1
+3;Abrollung nicht vorhanden;2
+4;Nicht entscheidbar, ob Abrollung vorhanden;3

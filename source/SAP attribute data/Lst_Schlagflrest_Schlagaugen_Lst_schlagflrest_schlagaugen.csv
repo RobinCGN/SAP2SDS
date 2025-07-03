@@ -1,0 +1,5 @@
+ID;Schlagflrest_Schlagaugen;Wert
+1;Kein Schlagflächenrest vorhanden;0
+2;Schlagaugen vorhanden;1
+3;Schlagaugen nicht vorhanden;2
+4;Nicht entscheidbar, ob Schlagaugen vorhanden;3

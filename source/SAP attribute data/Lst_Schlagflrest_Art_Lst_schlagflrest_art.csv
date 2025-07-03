@@ -1,0 +1,10 @@
+ID;Schlagflrest_Art;Wert;Prioritätszahl
+1;Kein Schlagflächenrest vorhanden;0;""
+2;Glatt;1;5
+3;Rinde oder natürliche Sprungfläche;2;4
+4;Primär fazettiert;3;7
+5;Sekundär fazettiert;4;6
+6;Keine Aussage;5;1
+7;Gratförmig;6;3
+8;Punktförmig;7;2
+9;Schliff;8;8

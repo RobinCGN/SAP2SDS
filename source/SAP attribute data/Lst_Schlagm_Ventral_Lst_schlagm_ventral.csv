@@ -1,0 +1,11 @@
+ID;Schlagm_Ventral;Wert;Kommentar
+1;Kein Proximalende vorhanden;0;""
+2;Kein Schlagkegel, keine Schlagnarbe;1;""
+3;Mit Schlagkegel, keine Schlagnarbe;2;""
+4;Kein Schlagkegel, mit Schlagnarbe;3;""
+5;Mit Schlagkegel, mit Schlagnarbe;4;""
+6;Fraglicher Schlagkegel, mit Schlagnarbe;5;""
+7;Mit Schlagkegel, fraglicher Schlagnarbe;6;""
+8;Fraglicher Schlagkegel, fragliche Schlagnarbe (keine Aussage);7;""
+9;Fragliche Schlagkegel (ohne Narbe);8;""
+10;Fragliche Schlagnarbe (ohne Kegel);9;""

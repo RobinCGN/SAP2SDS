@@ -1,0 +1,10 @@
+ID;Sandst_Rötel;Wert
+1;Keine Rötelspuren;0
+2;Auf einer oder beiden Arbeitsflächen;1
+3;Auf Längs- oder Unterseite;2
+4;Auf Bruchfläche;3
+5;Auf Arbeitsfläche und Längs- oder Unterseite;4
+6;Auf Arbeits- und Bruchfläche;5
+7;Auf Längs- oder Unterseite und Bruchfläche;6
+8;Auf Arbeits- und Bruchfläche und Längs- oder Unterseite;7
+9;Keine Aussage;8

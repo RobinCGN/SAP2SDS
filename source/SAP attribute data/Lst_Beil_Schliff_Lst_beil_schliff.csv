@@ -1,0 +1,10 @@
+ID;Beil_Schliff;Wert
+1;Keine überschliffene Bruchflächen, keine Aussage;0
+2;Vollständig;1
+3;Nur in der Länge nicht erhalten;2
+4;Nur in der Breite nicht erhalten;3
+5;Nur in der Dicke nicht erhalten;4
+6;In Länge und Breite nicht erhalten;6
+7;in Länge und Dicke nicht erhalten;7
+8;in Breite und Dicke nicht erhalten;8
+9;Dennoch in allen Maßen nicht erhalten;9

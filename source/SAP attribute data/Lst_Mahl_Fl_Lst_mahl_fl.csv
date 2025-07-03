@@ -1,0 +1,7 @@
+ID;Mahl_Fl;Wert
+1;Keine Mahl- oder Schleiffläche;0
+2;Keine Pickspuren und keine Schleifspuren;1
+3;Nur Schliffspuren;2
+4;Nur Pickspuren;3
+5;Pick- und Schliffspuren;4
+6;Keine Aussage;5

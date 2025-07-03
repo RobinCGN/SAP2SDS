@@ -1,0 +1,8 @@
+ID;Kern_Schlagfl;Wert
+15;Keine Schlagfläche;0
+16;Eine Schlagfläche;1
+17;Zwei gegenüberliegende Schlagflächen;2
+18;Zwei rechtwinklig aufeinanderstehende Schlagflächen;3
+19;Zwei Schlagflächen, die sich gegenseitig als Abbaufläche dienen;4
+20;Mehr als zwei Schlagflächen;5
+21;Anzahl der Schlagflächen unbestimmbar;6

@@ -1,0 +1,47 @@
+ID;Mod_Art;Wert;Kategorie;Kommentar
+8;Pfeilspitze;01;Geräte;
+9;Querschneider;45;Geräte;
+10;Bohrer;02;Geräte;
+11;Spitzklinge;03;Geräte;
+12;Kratzer;04;Geräte;
+13;Endretusche;05;Geräte;
+14;Lateralretusche;06;Geräte;
+15;Stichel;07;Geräte;
+16;Aussplitterung;09;Geräte;
+17;Lackglanz, kantenparallel;12;Geräte;
+18;Lackglanz, nicht kantenparallel;13;Geräte;
+19;Scheibenbeil;46;Geräte;
+20;Beil oder Dechsel;23;Geräte;
+21;Sonstige Retusche;33;Gebrauchsspuren;
+22;Anretuschierter Bulbus;39;Sonstige Zurichtungsspuren;
+23;Grobgerät;19;Sonstige Zurichtungsspuren;
+24;Retuschierte Ecke an Bruch grenzend;32;Gebrauchsspuren;
+25;Kerbbruch;08;Sonstige Zurichtungsspuren;
+26;Stichelabfall;34;Sonstige Zurichtungsspuren;
+27;Klopfer;15;Sonstige Zurichtungsspuren;
+28;Schlagnarbenfeld (= unvollst. Klopfer);16;Sonstige Zurichtungsspuren;
+29;Rötelspuren;27;Sonstige Zurichtungsspuren;
+30;Verrundung der Grate einer Fläche;11;Sonstige Zurichtungsspuren;
+31;Verrundung einer Kante;10;Gebrauchsspuren;
+32;Feine Gebrauchsspuren;31;Gebrauchsspuren;
+33;Schmaler Glanzsaum an steiler Kante;38;Gebrauchsspuren;
+34;Zähung bei Lackglanz;14;Gebrauchsspuren;
+35;Aussplitterung dorsaler Grate bei Bohrern;44;Gebrauchsspuren;
+36;Alter Bruch (nur wenn modifziert);17;Brüche;
+37;Neuer Bruch;30;Brüche;
+38;Pickspuren;22;;nur bei Kernen, Trümmern und Geröll
+39;Retuscheure;25;;nur bei Kernen, Trümmern und Geröll
+40;Pickgrübchen;42;;nur bei Kernen, Trümmern und Geröll
+41;Ritzen oder Schrammen;29;;nur bei Kernen, Trümmern und Geröll
+43;Mahlstein allgemein;36;;nur bei Felsgesteingeräten
+44;Läufer mit verdicktem Ende;40;;nur bei Felsgesteingeräten
+45;Pfeilschaftglätter;37;;nur bei Felsgesteingeräten
+46;Rillenstein;43;;nur bei Felsgesteingeräten
+47;Schleifstein allemein;24;;nur bei Felsgesteingeräten
+48;Schleifwanne;48;;nur bei Felsgesteingeräten
+49;Reibstein;47;;nur bei Felsgesteingeräten
+50;Stück mit unbestimmbarem Schliff;26;;nur bei Felsgesteingeräten
+51;Scheibenkeule;49;;nur bei Felsgesteingeräten
+52;Bohrkern;50;;nur bei Felsgesteingeräten
+53;Durch- oder Abschlagen;20;;"nur bei Felsgesteingeräten; z.B. bei als Kern abgebautem Silexbeil oder bei einem Mahlstein, der durch Abschlagen ungeformt ist"
+54;Lochung oder Anlochung;28;;

@@ -1,0 +1,6 @@
+ID;Rinde_natSprungfl;Wert
+1;Keine natürlichen Flcähen;0
+2;Unter 1/3 der Fläche von natürlichen Flächen bedeckt;1
+3;Mehr als 1/3 der Dorsalfläche von natürlichen Flächen bedeckt, aber nicht vollständig;2
+4;Vollständig von natürlichen Flächen bedeckt;3
+5;Keine Aussage;4

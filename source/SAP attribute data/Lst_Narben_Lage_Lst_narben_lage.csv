@@ -1,0 +1,10 @@
+ID;Narben_Lage;Wert
+1;Keine;0
+2;Zentral einseitig;1
+3;Zentral zweiseitig;2
+4;Nicht zentral einseitig;3
+5;Nicht zentral zweiseitig;4
+6;Zentral, nicht zentral einseitig;5
+7;Zentral, nicht zentral zweiseitig;6
+8;Anders;7
+9;Grundform nicht erhalten;8
