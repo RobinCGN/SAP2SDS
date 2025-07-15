@@ -10,7 +10,9 @@
 ############################################################
 
 
+
 # To-Do
+# - Recode an bestimmten Stellen verwenden, weil sonst unsauberers umkodieren!
 # - Kernmerkmale ergänzen (dafür Test-Daten erweitern)
 
 
@@ -24,9 +26,9 @@ require(here)
 # Data --------------------------------------------------------------------
 
 
-#data <- read.csv(here("data-raw/SAP_CSV/RA_85_dig_Anhang_126_Formblatt_01_Silex.csv"), sep=";",dec = ",", encoding="latin1")
+data <- read.csv(here("data-raw/SAP_CSV/RA_85_dig_Anhang_126_Formblatt_01_Silex.csv"), sep=";",dec = ",", encoding="latin1")
 #data <- read.csv(here("data-raw/SAP_CSV/RA_85_dig_Anhang_124_Formblatt_01_Kern.csv"), sep=";",dec = ",", encoding="latin1")
-data <- LW8
+#data <- LW8
 
 
 
@@ -172,14 +174,20 @@ data$FB1_32[data$FB1_32%in%c("",NA)] <- 5
 
 # SAP 33 - Grundform  -----------------------------------------------------
 
-# Umkodieren, "3" zu "5"
-data$FB1_33[data$FB1_33==3] <- 5
-data$FB1_33[data$FB1_33==4] <- 3
-data$FB1_33[data$FB1_33==5] <- 3
-data$FB1_33[data$FB1_33==6] <- 4
-data$FB1_33[data$FB1_33==8] <- 5
-data$FB1_33[data$FB1_33==9] <- 5
-data$FB1_33[data$FB1_33==7] <- 9
+# Umkodieren
+data$FB1_33 <- recode(data$FB1_33,
+                      '0' = 0, # Kern
+                      '1' = 1, # Kern
+                      '2' = 2, # Kern
+                      '3' = 5, # Kern
+                      '4' = 3, # Art. Trümmer
+                      '5' = 3, # Nat. Trümmer
+                      '6' = 4, # Geröll
+                      '8' = 5, # Kern aus Abschlag
+                      '9' = 999, # Kerntrümmer Dechsel bzw. Beil, Sandsteine m. Gebrauchsspuren, Rötel
+                      '7' = 9) # keine Aussage
+
+
 
 # SAP 38 - Verlauf Schlagrichtung  -----------------------------------------------------
 
@@ -357,6 +365,9 @@ names(data)[names(data) == "Mod_Reihe"] <- "FB2_60"
 
 data$IGerM <- gsub(" ", "", data$IGerM)
 data$IGerM
+
+# Code für Grobgerät (31) ist in SAP als unbestimmtarer Lackglanz vergeben
+data$IGerM[data$IGerM==31] <- 999
 
 #data$igerm2 <- gsub(" ", "", data$igerm2)
 
