@@ -22,12 +22,13 @@
 # - Mod-Art
 
 require(here)
+require(dplyr) # recode()
 
 # Data --------------------------------------------------------------------
 
 
-data <- read.csv(here("data-raw/SAP_CSV/RA_85_dig_Anhang_126_Formblatt_01_Silex.csv"), sep=";",dec = ",", encoding="latin1")
-#data <- read.csv(here("data-raw/SAP_CSV/RA_85_dig_Anhang_124_Formblatt_01_Kern.csv"), sep=";",dec = ",", encoding="latin1")
+data <- read.csv(here::here("data-raw/SAP_CSV/RA_85_dig_Anhang_126_Formblatt_01_Silex.csv"), sep=";",dec = ",", encoding="latin1")
+#data <- read.csv(here::here("data-raw/SAP_CSV/RA_85_dig_Anhang_124_Formblatt_01_Kern.csv"), sep=";",dec = ",", encoding="latin1")
 #data <- LW8
 
 
@@ -49,7 +50,7 @@ names(data)[names(data) == "Formblattnr"] <- "FBG_6"
 # Rohmaterial?
 #names(data)[names(data) == "Rohmat1"] <- "FB1_16" 
 
-# Rohmaterialfarbe?
+
 names(data)[names(data) == "Rohmat_Farbe"] <- "FB1_17" 
 
 names(data)[names(data) == "Oberfl_art_Spaltfl"] <- "FB1_18" 
@@ -110,7 +111,7 @@ names(data)[names(data) == "Kern_SchlagflBreite"] <- "FB2_75"
 
 names(data)[names(data) == "Klopfspur_Lage"] <- "FB2_67"
 
-# Convert all Factors to Characte Variables
+# Convert all Factors to character Variables
 data[sapply(data, is.factor)] <- lapply(data[sapply(data, is.factor)], as.character)
 
 # Delete empty spaces from Variables
@@ -176,15 +177,15 @@ data$FB1_32[data$FB1_32%in%c("",NA)] <- 5
 
 # Umkodieren
 data$FB1_33 <- recode(data$FB1_33,
-                      '0' = 0, # Kern
-                      '1' = 1, # Kern
-                      '2' = 2, # Kern
+                      '0' = 0, # Dechsel bzw. Beil, Sandsteine m. Gebrauchsspuren, Rötel
+                      '1' = 1, # Abschlag
+                      '2' = 2, # Klinge
                       '3' = 5, # Kern
                       '4' = 3, # Art. Trümmer
                       '5' = 3, # Nat. Trümmer
                       '6' = 4, # Geröll
-                      '8' = 5, # Kern aus Abschlag
-                      '9' = 999, # Kerntrümmer Dechsel bzw. Beil, Sandsteine m. Gebrauchsspuren, Rötel
+                      '8' = 5, # Kern aus Abschlag -> Kern
+                      '9' = 5, # Kerntrümmer  -> Kern
                       '7' = 9) # keine Aussage
 
 
@@ -216,14 +217,18 @@ data$FB2_43[data$FB2_42==7] <- 2
 
 # Umkodieren
 if (is.null(data$FB2_42)==FALSE) {
- data$FB2_42[data$FB2_42==1] <- 3
- data$FB2_42[data$FB2_42==2] <- 1
- data$FB2_42[data$FB2_42==3] <- 4
- data$FB2_42[data$FB2_42==4] <- 5
- data$FB2_42[data$FB2_42==5] <- 9
- data$FB2_42[data$FB2_42==6] <- 999
- data$FB2_42[data$FB2_42==7] <- 999
- data$FB2_42[data$FB2_42==8] <- 7
+
+  data$FB2_42 <- recode(data$FB2_42,
+                        '0' = 0,
+                        '1' = 3,
+                        '2' = 1,
+                        '3' = 4,
+                        '4' = 5,
+                        '5' = 9,
+                        '6' = 999,
+                        '7' = 999,
+                        '8' = 7,
+                        '9' = 9) 
 }
 
 
@@ -231,10 +236,12 @@ if (is.null(data$FB2_42)==FALSE) {
 
 # Umkodieren
 if (is.null(data$FB2_52)==FALSE) {
-  data$FB2_52[data$FB2_52==0] <- 1
-  data$FB2_52[data$FB2_52==1] <- 4
-  data$FB2_52[data$FB2_52==2] <- 0
-  data$FB2_52[data$FB2_52==3] <- 9
+  
+  data$FB2_52 <- recode(data$FB2_52,
+                        '0' = 1,
+                        '1' = 4,
+                        '2' = 0,
+                        '3' = 9) 
 }
 
 
@@ -247,10 +254,12 @@ if (is.null(data$FB2_52)==FALSE) {
 
 # Umkodieren
 if (is.null(data$FB1_23)==FALSE) {
-data$FB1_23[data$FB1_23==0] <- 1
-data$FB1_23[data$FB1_23==2] <- 2
-data$FB1_23[data$FB1_23==3] <- 4
-data$FB1_23[data$FB1_23==4] <- 9
+  data$FB1_23 <- recode(data$FB1_23,
+                        '0' = 1,
+                        '1' = 1,
+                        '2' = 2,
+                        '3' = 3,
+                        '4' = 4)
 }
 
 # SAP 30 - Negative auf Dorsalseite und dem SFR > 2cm mit Bulbusnegativ  --
@@ -293,14 +302,31 @@ data <- cbind(data, FB2_51 = rep(c(999),nrow(data)))
 
 
 # Kegel
-data$FB2_49[data$Schlagm_Ventral%in%c(2,4,6)] <- 4 # Kegel vorhanden
-data$FB2_49[data$Schlagm_Ventral%in%c(1,3)] <- 0 # kein Kegel
-data$FB2_49[data$Schlagm_Ventral%in%c(0)] <- 1 # Proximal nicht erhalten  
+data$FB2_49 <- recode(data$Schlagm_Ventral,
+                      '0' = 1, # Proximal nicht erhalten 
+                      '1' = 0, # kein Kegel
+                      '2' = 4, # Kegel vorhanden
+                      '3' = 0, # kein Kegel
+                      '4' = 4, # Kegel vorhanden
+                      '5' = 9, # fraglicher Kegel
+                      '6' = 4, # Kegel vorhanden
+                      '7' = 9, # keine Aussage
+                      '8' = 9, # keine Aussage
+                      '9' = 9) # keine Aussage
 
 # Narbe
-data$FB2_51[data$Schlagm_Ventral%in%c(3,4,5)] <- 4 # Narbe vorhanden
-data$FB2_51[data$Schlagm_Ventral%in%c(1,2)] <- 0 # keine Narbe
-data$FB2_51[data$Schlagm_Ventral%in%c(0)] <- 1 # Proximal nicht erhalten  
+data$FB2_51 <- recode(data$Schlagm_Ventral,
+                      '0' = 1, # Proximal nicht erhalten  
+                      '1' = 0, # keine Narbe
+                      '2' = 0, # keine Narbe
+                      '3' = 4, # Narbe vorhanden
+                      '4' = 4, # Narbe vorhanden
+                      '5' = 4, # Narbe vorhanden
+                      '6' = 9, # keine Aussage
+                      '7' = 9, # keine Aussage
+                      '8' = 9, # keine Aussage
+                      '9' = 9) # keine Aussage
+
 
 # Altes Merkmal "Schlam_Ventral" lösch
 data$Schlagm_Ventral <- NULL

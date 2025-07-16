@@ -16,7 +16,7 @@ data.deco
 
 # Filter only Lithic artefacts (SAP style)
 #data.deco <- subset(data.deco, Rohmat1%in%Rohmat_Silex$Wert);
-#data.deco <- subset(data.deco, index_geraete_modifikation != "Natuerlicher Truemmer" & index_geraete_modifikation != "Unmodifziertes Geroell");
+data.deco <- subset(data.deco, index_geraete_modifikation != "Natuerlicher Truemmer" & index_geraete_modifikation != "Unmodifziertes Geroell");
 #data.deco <- subset(data.deco, gf_1 != " " & gf_1 != "Besondere Geraetekategorie");
 
 
@@ -68,29 +68,34 @@ t2
 # Stat. Maße der Gewichte
 
 t3 <- data.deco[data.deco$gewicht!=999,] %>%
-  summarise(Gew_Anzahl = n(), Gew_Min = min(gewicht), Gew_Max = max(gewicht), Gew_Mittel = mean(gewicht), Gew_Median = median(gewicht))
+  summarise(Gew_Anzahl = n(), Gew_Min = min(gewicht), Gew_Max = max(gewicht), Gew_Mittel = round(mean(gewicht),1), Gew_Median = median(gewicht))
 t3
 
 
-# Grundform
+
+# Grundform mod/unmod
 t4 <- data.deco [data.deco$rohmaterial!=11,] %>% # unbestimmare Rohmat. ausschließen
-  group_by(gf_1) %>%
-  summarise(Anzahl = n(), Proz = round(n() / nrow(data.deco) * 100,1))
+  group_by(gf_1, mod_unmod) %>%
+  summarise(Anzahl = n(), Proz = round(n() / nrow(data.deco) * 100,1), .groups = "drop_last")
 t4
 
 
-# Grundform
-t5 <- data.deco [data.deco$rohmaterial!=11,] %>% # unbestimmare Rohmat. ausschließen
-  group_by(gf_1, mod_unmod) %>%
+# Rinde (hier scheint ein Fehler in "lookup" vorzuliegen, "unbestimmbare Rinde" wird nicht richtig kodiert)
+t5 <- data.deco %>%
+  group_by(rinde) %>%
   summarise(Anzahl = n(), Proz = round(n() / nrow(data.deco) * 100,1))
 t5
 
+# Grundform, mod/unmod und Rinde
+rinde_pa <- rep(NA,(nrow(data.deco)))
+if(is.null(data.deco$rinde_pa)){data.deco <- cbind(data.deco, rinde_pa, stringsAsFactors=FALSE)}
+data.deco$rinde_pa[data.deco$rinde=="Keine Rinde"] <- "ohne_Rinde"
 
-# Rinde
 t6 <- data.deco %>%
-  group_by(rinde) %>%
-  summarise(Anzahl = n(), Proz = round(n() / nrow(data.deco) * 100,1))
+  group_by(gf_1, mod_unmod, rinde_pa) %>%
+  summarise(Anzahl = n(), Proz = round(n() / nrow(data.deco) * 100,1), .groups = "drop_last")
 t6
+
 
 
 # Therm_Art
@@ -105,16 +110,67 @@ t8 <- data.deco %>%
   summarise(Anzahl = n(), Proz = round(n() / nrow(data.deco) * 100,1))
 t8
 
-# IGerM
+# Verbrannt ja/nein
+feuer_pa <- rep("verbrannt",(nrow(data.deco)))
+if(is.null(data.deco$feuer_pa)){data.deco <- cbind(data.deco, feuer_pa, stringsAsFactors=FALSE)}
+data.deco$rinde_pa[data.deco$feuer_pa=="Keine thermische Einwirkung"] <- "unverbrannt"
+
 t9 <- data.deco %>%
-  group_by(index_geraete_modifikation) %>%
-  summarise(Anzahl = n(), Proz = round(n() / nrow(data.deco) * 100,1))
+  group_by(gf_1, mod_unmod, feuer_pa) %>%
+  summarise(Anzahl = n(), Proz = round(n() / nrow(data.deco) * 100,1), .groups = "drop_last")
 t9
+
+
+# Kegel
+t10 <- data.deco %>%
+  group_by(gf_1, schlagmerkmal_kegel) %>%
+  summarise(Anzahl = n(), Proz = round(n() / nrow(data.deco) * 100,1), .groups = "drop_last")
+t10
+
+
+# Narben
+t11 <- data.deco %>%
+  group_by(gf_1, schlagmerkmal_schlagnarbe) %>%
+  summarise(Anzahl = n(), Proz = round(n() / nrow(data.deco) * 100,1), .groups = "drop_last")
+t11
+
+
+# Augen
+t12 <- data.deco %>%
+  group_by(gf_1, schlagmerkmal_schlagaugen) %>%
+  summarise(Anzahl = n(), Proz = round(n() / nrow(data.deco) * 100,1), .groups = "drop_last")
+t12
+
+
+# SFR-Art
+t13 <- data.deco [data.deco$gf_1%in%c("Abschlag","Klinge/Klingenbruchstueck"),] %>%
+  group_by(gf_1, schlagflaechenrest_art) %>%
+  summarise(Anzahl = n(), 
+            Proz = round(n() / nrow(data.deco[data.deco$gf_1%in%c("Abschlag","Klinge/Klingenbruchstueck"),]) * 100,1)
+            , .groups = "drop_last")
+t13
+
+# SFR-Form
+t14 <- data.deco [data.deco$gf_1%in%c("Abschlag","Klinge/Klingenbruchstueck"),] %>%
+  group_by(gf_1, schlagflaechenrest_form) %>%
+  summarise(Anzahl = n(),
+            Proz = round(n() / nrow(data.deco[data.deco$gf_1%in%c("Abschlag","Klinge/Klingenbruchstueck"),]) * 100,1)
+            , .groups = "drop_last")
+t14
+
+
+# IGerM
+t15 <- data.deco[data.deco$mod_unmod=="mod",]  %>%
+  group_by(index_geraete_modifikation) %>%
+  summarise(Anzahl = n(), Proz = round(n() / nrow(data.deco[data.deco$mod_unmod=="mod",]) * 100,1))
+t15
+
+
 
 export.file <- here::here("output/Data_Report.txt")
 sink(export.file)
 cat("Data Report\n\n")
-tibble.liste <- list(t0, t1, t2, t3, t4, t5, t6, t7, t8, t9)
+tibble.liste <- list(t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t13, t15)
 for (i in 1:length(tibble.liste)) {   
   print(as.data.frame(tibble.liste[[i]]))
   cat("\n")
