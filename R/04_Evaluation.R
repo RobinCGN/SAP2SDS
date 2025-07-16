@@ -68,14 +68,14 @@ t2
 # Stat. Maße der Gewichte
 
 t3 <- data.deco[data.deco$gewicht!=999,] %>%
-  summarise(Gew_Anzahl = n(), Gew_Min = min(gewicht), Gew_Max = max(gewicht), Gew_Mittel = round(mean(gewicht),1), Gew_Median = median(gewicht))
+  summarise(Gew_Anzahl = n(), Gew_Min = min(gewicht,na.rm = T), Gew_Max = max(gewicht,na.rm = T), Gew_Mittel = round(mean(gewicht,na.rm = T),1), Gew_Median = median(gewicht,na.rm = T))
 t3
 
 
 
 # Grundform mod/unmod
 t4 <- data.deco [data.deco$rohmaterial!=11,] %>% # unbestimmare Rohmat. ausschließen
-  group_by(gf_1, mod_unmod) %>%
+  group_by(factor(data.deco$gf_1, levels=c("Abschlag","Klinge/Klingenbruchstueck","Kern","Truemmer","Geroell")), mod_unmod) %>%
   summarise(Anzahl = n(), Proz = round(n() / nrow(data.deco) * 100,1), .groups = "drop_last")
 t4
 

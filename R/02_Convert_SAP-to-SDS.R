@@ -29,7 +29,7 @@ require(dplyr) # recode()
 
 data <- read.csv(here::here("data-raw/SAP_CSV/RA_85_dig_Anhang_126_Formblatt_01_Silex.csv"), sep=";",dec = ",", encoding="latin1")
 #data <- read.csv(here::here("data-raw/SAP_CSV/RA_85_dig_Anhang_124_Formblatt_01_Kern.csv"), sep=";",dec = ",", encoding="latin1")
-#data <- LW8
+data <- LW8_silex_art
 
 
 

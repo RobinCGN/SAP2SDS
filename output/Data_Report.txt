@@ -1,136 +1,292 @@
 Data Report
 
-       Gesamt   N
-1 Gesamtsumme 520
+       Gesamt    N
+1 Gesamtsumme 9538
 
 
 --------------------------------------------------------------------------
 
           rohmaterial Anzahl Proz
-1                  01     10  1.9
-2                0103      1  0.2
-3                0105      2  0.4
-4                0106      1  0.2
-5                0109      2  0.4
-6                  02      1  0.2
-7                0205      1  0.2
-8                0206      2  0.4
-9                  03      5  1.0
-10               0305      5  1.0
-11               0306     22  4.2
-12                 05     56 10.8
-13               0501      5  1.0
-14               0502      3  0.6
-15                 06     35  6.7
-16               0605    144 27.7
-17                 07      1  0.2
-18               0806      1  0.2
-19                 10      4  0.8
-20               1002      1  0.2
-21                 11     75 14.4
-22 Rijckholt-Schotter    143 27.5
+1                0100     51  0.5
+2                0106      8  0.1
+3                0107      1  0.0
+4                0200     89  0.9
+5                0205     10  0.1
+6                0206      4  0.0
+7                0210      2  0.0
+8                0300    103  1.1
+9                0305     43  0.5
+10               0306     27  0.3
+11               0310      2  0.0
+12               0400     11  0.1
+13               0405      2  0.0
+14               0410      1  0.0
+15               0500   1106 11.6
+16               0502      6  0.1
+17               0503     51  0.5
+18               0507      1  0.0
+19               0510      4  0.0
+20               0511      1  0.0
+21               0600    488  5.1
+22               0601     31  0.3
+23               0602      3  0.0
+24               0603     78  0.8
+25               0605   3159 33.1
+26               0611      3  0.0
+27               0700      6  0.1
+28               0705      1  0.0
+29               1000     22  0.2
+30               1001      1  0.0
+31               1003      2  0.0
+32               1006      1  0.0
+33               1008      2  0.0
+34               1100    465  4.9
+35               1102      1  0.0
+36               1103      1  0.0
+37               3500      3  0.0
+38 Rijckholt-Schotter   3748 39.3
 
 
 --------------------------------------------------------------------------
 
-                     rohmaterial_ord Anzahl Proz
-1 Hellgrauer 'belgischer' Feuerstein     16  3.1
-2                  Obourg-Feuerstein      1  0.2
-3               Rijckholt-Feuerstein    351 67.5
-4                  Rullen-Feuerstein     32  6.2
-5                Schotter-Feuerstein     35  6.7
-6             Singulaerer Feuerstein      5  1.0
-7          Unbestimmbarer Feuerstein     75 14.4
-8              Valkenburg-Feuerstein      1  0.2
-9                Vetschau-Feuerstein      4  0.8
+                      rohmaterial_ord Anzahl Proz
+1                                0100     51  0.5
+2                                0107      1  0.0
+3                                0200     89  0.9
+4                                0210      2  0.0
+5                                0300    103  1.1
+6                                0310      2  0.0
+7                                0400     11  0.1
+8                                0405      2  0.0
+9                                0410      1  0.0
+10                               0500   1106 11.6
+11                               0507      1  0.0
+12                               0510      4  0.0
+13                               0511      1  0.0
+14                               0600    488  5.1
+15                               0601     31  0.3
+16                               0602      3  0.0
+17                               0611      3  0.0
+18                               0700      6  0.1
+19                               0705      1  0.0
+20                               1000     22  0.2
+21                               1001      1  0.0
+22                               1003      2  0.0
+23                               1006      1  0.0
+24                               1008      2  0.0
+25                               1100    465  4.9
+26                               1102      1  0.0
+27                               1103      1  0.0
+28                               3500      3  0.0
+29 Hellgrauer 'belgischer' Feuerstein      8  0.1
+30               Rijckholt-Feuerstein   6913 72.5
+31                  Rullen-Feuerstein    199  2.1
+32                Vetschau-Feuerstein     14  0.1
 
 
 --------------------------------------------------------------------------
 
   Gew_Anzahl Gew_Min Gew_Max Gew_Mittel Gew_Median
-1        517     0.1   293.3   7.231141        2.6
+1       9538       1    1693       12.6          4
 
 
 --------------------------------------------------------------------------
 
-                       gf_1 Anzahl Proz
-1                  Abschlag    242 46.5
-2                   Geroell      3  0.6
-3                      Kern      8  1.5
-4 Klinge/Klingenbruchstueck    165 31.7
-5                  Truemmer     25  4.8
-6                      <NA>      2  0.4
-
-
---------------------------------------------------------------------------
-
-                        gf_1 mod_unmod Anzahl Proz
-1                   Abschlag       mod     59 11.3
-2                   Abschlag     unmod    183 35.2
-3                    Geroell       mod      1  0.2
-4                    Geroell     unmod      2  0.4
-5                       Kern       mod      5  1.0
-6                       Kern     unmod      3  0.6
-7  Klinge/Klingenbruchstueck       mod     70 13.5
-8  Klinge/Klingenbruchstueck     unmod     95 18.3
-9                   Truemmer       mod      5  1.0
-10                  Truemmer     unmod     20  3.8
-11                      <NA>       mod      2  0.4
+                 factor(...) mod_unmod Anzahl Proz
+1                   Abschlag       mod    433  4.5
+2                   Abschlag     unmod   5975 62.6
+3  Klinge/Klingenbruchstueck       mod    672  7.0
+4  Klinge/Klingenbruchstueck     unmod   2015 21.1
+5                       Kern       mod    107  1.1
+6                       Kern     unmod    184  1.9
+7                   Truemmer       mod     11  0.1
+8                   Truemmer     unmod    137  1.4
+9                    Geroell       mod      2  0.0
+10                      <NA>       mod      2  0.0
 
 
 --------------------------------------------------------------------------
 
                                                    rinde Anzahl Proz
-1 (duenne rauhe Rinde) oder sonstige glatte Geroellrinde     22  4.2
-2                                            Keine Rinde    372 71.5
-3                                  Kreiderinde (ritzbar)    104 20.0
-4                                                   <NA>     22  4.2
+1 (duenne rauhe Rinde) oder sonstige glatte Geroellrinde    820  8.6
+2                                            Keine Rinde   6119 64.2
+3                                  Kreiderinde (ritzbar)   1417 14.9
+4                                           Maasei Rinde      5  0.1
+5                                                   <NA>   1177 12.3
+
+
+--------------------------------------------------------------------------
+
+                        gf_1 mod_unmod   rinde_pa Anzahl Proz
+1                   Abschlag       mod ohne_Rinde    246  2.6
+2                   Abschlag       mod       <NA>    187  2.0
+3                   Abschlag     unmod ohne_Rinde   3626 38.0
+4                   Abschlag     unmod       <NA>   2349 24.6
+5                    Geroell       mod ohne_Rinde      1  0.0
+6                    Geroell       mod       <NA>      1  0.0
+7                       Kern       mod ohne_Rinde     69  0.7
+8                       Kern       mod       <NA>     38  0.4
+9                       Kern     unmod ohne_Rinde     82  0.9
+10                      Kern     unmod       <NA>    102  1.1
+11 Klinge/Klingenbruchstueck       mod ohne_Rinde    534  5.6
+12 Klinge/Klingenbruchstueck       mod       <NA>    138  1.4
+13 Klinge/Klingenbruchstueck     unmod ohne_Rinde   1489 15.6
+14 Klinge/Klingenbruchstueck     unmod       <NA>    526  5.5
+15                  Truemmer       mod ohne_Rinde      5  0.1
+16                  Truemmer       mod       <NA>      6  0.1
+17                  Truemmer     unmod ohne_Rinde     66  0.7
+18                  Truemmer     unmod       <NA>     71  0.7
+19                      <NA>       mod ohne_Rinde      1  0.0
+20                      <NA>       mod       <NA>      1  0.0
 
 
 --------------------------------------------------------------------------
 
                                       therm_art Anzahl Proz
-1                                 Farbaenderung      4  0.8
-2                       Farbaenderung und Risse     14  2.7
-3        Farbaenderung und schalige Ausspruenge      3  0.6
-4 Farbaenderung, Risse und schalige Ausspruenge     41  7.9
-5                   Keine thermische Einwirkung    449 86.3
-6                                         Risse      1  0.2
-7                Risse und schalige Ausspruenge      1  0.2
-8                                          <NA>      7  1.3
+1                                 Farbaenderung     19  0.2
+2                       Farbaenderung und Risse     43  0.5
+3        Farbaenderung und schalige Ausspruenge     11  0.1
+4 Farbaenderung, Risse und schalige Ausspruenge    498  5.2
+5                   Keine thermische Einwirkung   8656 90.8
+6                                         Risse    132  1.4
+7                Risse und schalige Ausspruenge    147  1.5
+8                          Schalige Ausspruenge     25  0.3
+9                                          <NA>      7  0.1
 
 
 --------------------------------------------------------------------------
 
                                             therm_zeit Anzahl Proz
-1                          Keine thermische Einwirkung    450 86.5
-2 Nach Abtrennung der Grundformbzw. dem Abbau als Kern     50  9.6
-3                                 Nach der Modifkation      8  1.5
-4                                    Thermischer Bruch      1  0.2
-5                           Verbranntes Nicht-Artefakt      2  0.4
-6                                                 <NA>      9  1.7
+1                          Keine thermische Einwirkung   8656 90.8
+2 Nach Abtrennung der Grundformbzw. dem Abbau als Kern    722  7.6
+3                                 Nach der Modifkation     95  1.0
+4                                  Rohstoff aufgeheizt     56  0.6
+5                                    Thermischer Bruch      2  0.0
+6                           Verbranntes Nicht-Artefakt      1  0.0
+7                                                 <NA>      6  0.1
+
+
+--------------------------------------------------------------------------
+
+                        gf_1 mod_unmod  feuer_pa Anzahl Proz
+1                   Abschlag       mod verbrannt    433  4.5
+2                   Abschlag     unmod verbrannt   5975 62.6
+3                    Geroell       mod verbrannt      2  0.0
+4                       Kern       mod verbrannt    107  1.1
+5                       Kern     unmod verbrannt    184  1.9
+6  Klinge/Klingenbruchstueck       mod verbrannt    672  7.0
+7  Klinge/Klingenbruchstueck     unmod verbrannt   2015 21.1
+8                   Truemmer       mod verbrannt     11  0.1
+9                   Truemmer     unmod verbrannt    137  1.4
+10                      <NA>       mod verbrannt      2  0.0
+
+
+--------------------------------------------------------------------------
+
+                        gf_1     schlagmerkmal_kegel Anzahl Proz
+1                   Abschlag         Kegel vorhanden    803  8.4
+2                   Abschlag              Kein Kegel   3725 39.1
+3                   Abschlag Proximal nicht erhalten   1799 18.9
+4                   Abschlag                    <NA>     81  0.8
+5                    Geroell Proximal nicht erhalten      2  0.0
+6                       Kern                    <NA>    291  3.1
+7  Klinge/Klingenbruchstueck         Kegel vorhanden     70  0.7
+8  Klinge/Klingenbruchstueck              Kein Kegel   1369 14.4
+9  Klinge/Klingenbruchstueck Proximal nicht erhalten   1235 12.9
+10 Klinge/Klingenbruchstueck                    <NA>     13  0.1
+11                  Truemmer Proximal nicht erhalten    148  1.6
+12                      <NA> Proximal nicht erhalten      2  0.0
+
+
+--------------------------------------------------------------------------
+
+                        gf_1 schlagmerkmal_schlagnarbe Anzahl Proz
+1                   Abschlag               Keine Narbe   2609 27.4
+2                   Abschlag           Narbe vorhanden   1915 20.1
+3                   Abschlag   Proximal nicht erhalten   1799 18.9
+4                   Abschlag                      <NA>     85  0.9
+5                    Geroell   Proximal nicht erhalten      2  0.0
+6                       Kern                      <NA>    291  3.1
+7  Klinge/Klingenbruchstueck               Keine Narbe    759  8.0
+8  Klinge/Klingenbruchstueck           Narbe vorhanden    681  7.1
+9  Klinge/Klingenbruchstueck   Proximal nicht erhalten   1235 12.9
+10 Klinge/Klingenbruchstueck                      <NA>     12  0.1
+11                  Truemmer   Proximal nicht erhalten    148  1.6
+12                      <NA>   Proximal nicht erhalten      2  0.0
+
+
+--------------------------------------------------------------------------
+
+                        gf_1        schlagmerkmal_schlagaugen Anzahl Proz
+1                   Abschlag Nicht entscheidbar/keine Aussage      8  0.1
+2                   Abschlag          Proximal nicht erhalten   1800 18.9
+3                   Abschlag            Schlagaugen vorhanden    636  6.7
+4                   Abschlag                             <NA>   3964 41.6
+5                    Geroell          Proximal nicht erhalten      2  0.0
+6                       Kern                             <NA>    291  3.1
+7  Klinge/Klingenbruchstueck Nicht entscheidbar/keine Aussage      3  0.0
+8  Klinge/Klingenbruchstueck          Proximal nicht erhalten   1235 12.9
+9  Klinge/Klingenbruchstueck            Schlagaugen vorhanden     64  0.7
+10 Klinge/Klingenbruchstueck                             <NA>   1385 14.5
+11                  Truemmer          Proximal nicht erhalten    148  1.6
+12                      <NA>          Proximal nicht erhalten      2  0.0
+
+
+--------------------------------------------------------------------------
+
+                        gf_1               schlagflaechenrest_art Anzahl Proz
+1                   Abschlag                                  999    419  4.6
+2                   Abschlag                                Glatt   1821 20.0
+3                   Abschlag                   Kein SFR vorhanden   1800 19.8
+4                   Abschlag                   Primaer facettiert    386  4.2
+5                   Abschlag Rinde oder natuerliche Sprungflaeche    501  5.5
+6                   Abschlag                 Sekundaer facettiert   1385 15.2
+7                   Abschlag                                 <NA>     96  1.1
+8  Klinge/Klingenbruchstueck                                  999     38  0.4
+9  Klinge/Klingenbruchstueck                                Glatt    891  9.8
+10 Klinge/Klingenbruchstueck                   Kein SFR vorhanden   1235 13.6
+11 Klinge/Klingenbruchstueck                   Primaer facettiert     75  0.8
+12 Klinge/Klingenbruchstueck Rinde oder natuerliche Sprungflaeche     52  0.6
+13 Klinge/Klingenbruchstueck                 Sekundaer facettiert    384  4.2
+14 Klinge/Klingenbruchstueck                                 <NA>     12  0.1
+
+
+--------------------------------------------------------------------------
+
+                        gf_1               schlagflaechenrest_art Anzahl Proz
+1                   Abschlag                                  999    419  4.6
+2                   Abschlag                                Glatt   1821 20.0
+3                   Abschlag                   Kein SFR vorhanden   1800 19.8
+4                   Abschlag                   Primaer facettiert    386  4.2
+5                   Abschlag Rinde oder natuerliche Sprungflaeche    501  5.5
+6                   Abschlag                 Sekundaer facettiert   1385 15.2
+7                   Abschlag                                 <NA>     96  1.1
+8  Klinge/Klingenbruchstueck                                  999     38  0.4
+9  Klinge/Klingenbruchstueck                                Glatt    891  9.8
+10 Klinge/Klingenbruchstueck                   Kein SFR vorhanden   1235 13.6
+11 Klinge/Klingenbruchstueck                   Primaer facettiert     75  0.8
+12 Klinge/Klingenbruchstueck Rinde oder natuerliche Sprungflaeche     52  0.6
+13 Klinge/Klingenbruchstueck                 Sekundaer facettiert    384  4.2
+14 Klinge/Klingenbruchstueck                                 <NA>     12  0.1
 
 
 --------------------------------------------------------------------------
 
            index_geraete_modifikation Anzahl Proz
-1                                 999      2  0.4
-2               Artifzieller Truemmer     29  5.6
-3             Ausgesplittertes Stueck     11  2.1
-4                              Bohrer      3  0.6
-5                         Endretusche     21  4.0
-6  Klopfer aus Silex oder Felsgestein      6  1.2
-7                             Kratzer     31  6.0
-8                 Lackglanz, diagonal     10  1.9
-9           Lackglanz, kantenparallel      8  1.5
-10                    Lateralretusche     17  3.3
-11              Natuerlicher Truemmer      7  1.3
-12                   Projektilspitzen     45  8.7
-13               Unmodifzierte Klinge    110 21.2
-14            Unmodifzierter Abschlag    211 40.6
-15                Unmodifzierter Kern      5  1.0
-16        Unmodifzierter Kerntruemmer      1  0.2
-17             Unmodifziertes Geroell      3  0.6
+1                                  99      1  0.1
+2             Ausgesplittertes Stueck     94  7.7
+3                              Bohrer     40  3.3
+4                       Dechsel, Beil      1  0.1
+5                         Endretusche    122  9.9
+6  Klopfer aus Silex oder Felsgestein    110  9.0
+7                             Kratzer    396 32.3
+8                 Lackglanz, diagonal    174 14.2
+9           Lackglanz, kantenparallel     12  1.0
+10                    Lateralretusche    223 18.2
+11                   Projektilspitzen     39  3.2
+12                            Stichel      6  0.5
+13   Unmodifzierter Kern aus Abschlag      7  0.6
+14  Unmodifziertes Stueck, k/A zur GF      2  0.2
 
 
 --------------------------------------------------------------------------

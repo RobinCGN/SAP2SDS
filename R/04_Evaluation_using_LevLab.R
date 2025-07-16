@@ -26,7 +26,6 @@ data.re <- rename(data, lanr = FBG_1,
                   therm_art = FB1_24,                           
                   therm_zeit = FB1_25,                           
                   erhaltung_gf = FB1_26,                         
-                  LÃ.nge = LÃ.nge,                              
                   breite = FB1_28,                               
                   dicke = FB1_29,                                
                   gewicht = FB1_30,                             
@@ -34,7 +33,6 @@ data.re <- rename(data, lanr = FBG_1,
                   gf_1 = FB1_33,                                 
                   erhaltung_gf_schlagrichtung = FB2_35,         
                   verlauf_schlagrichtung = FB2_38,               
-                  Schlagflrest_LÃ.nge = Schlagflrest_LÃ.nge,     
                   schlagflaechenrest_breite = FB2_46,           
                   schlagflaechenrest_erhaltung = FB2_44,         
                   schlagflaechenrest_art = FB2_42,               
@@ -200,7 +198,7 @@ t14
 
 # IGerM
 t15 <- data.re[data.re$mod_unmod=="mod",]  %>%
-  group_by(index_geraete_modifikation) %>%
+  group_by(levlab(data.re$index_geraete_modifikation)) %>%
   summarise(Anzahl = n(), Proz = round(n() / nrow(data.re[data.re$mod_unmod=="mod",]) * 100,1))
 t15
 
